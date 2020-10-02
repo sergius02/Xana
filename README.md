@@ -3,6 +3,10 @@
 </p>
 <h1 align="center">Xana</h1>
 
+![Last Release](https://img.shields.io/github/v/release/sergius02/Xana?include_prereleases&style=for-the-badge)
+![Build Status](https://img.shields.io/travis/sergius02/Xana/main?style=for-the-badge)
+![License](https://img.shields.io/github/license/sergius02/Xana?style=for-the-badge)
+
 <p align="center">
   <img src="screenshots/xana.png" alt="Icon" />
 </p>
