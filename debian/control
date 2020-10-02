@@ -1,0 +1,18 @@
+Source: com.github.sergius02.xana
+Section: x11
+Priority: optional
+Maintainer: Sergio Fernández Celorio <scelorio1990@gmail.com>
+Build-Depends: cmake (>= 2.8),
+               debhelper (>= 9),
+               libgtk-3-dev,
+               valac (>= 0.40.0),
+               meson,
+               qrencode,
+               libwebkit2gtk-4.0-dev
+Standards-Version: 1.0.0-alpha.1
+
+Package: com.github.sergius02.xana
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Hey young world
+ This is a Hello World written in Vala using CMake build system.
