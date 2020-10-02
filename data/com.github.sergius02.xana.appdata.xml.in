@@ -7,7 +7,9 @@
   <name>Xana</name>
   <summary>A dev-oriented web browser, written in Vala</summary>
   <description>
-    <p>A web browser made by and for developers</p>
+    <p>A web browser made by and for developers. </p>
+    <p>With this browser i try to make a tool that helps every web developer.</p>
+    <p>Instead of need to install an unlimited number of plugins, how about if you only need to install one app.</p>
   </description>
   <provides>
     <binary>com.github.sergius02.xana</binary>
@@ -18,6 +20,8 @@
   <url type="help">https://github.com/sergius02/Xana/issues</url>
   <screenshots>
     <screenshot type="default">
+      <caption>Normal variant</caption>
+      <image>https://github.com/sergius02/Xana/raw/main/screenshots/xana.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
