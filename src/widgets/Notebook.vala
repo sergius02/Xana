@@ -50,6 +50,10 @@ public class Xana.Notebook : Gtk.Notebook {
         web_view.load_home ();
     }
 
+    public void load (string uri) {
+        get_current_webview ().load_uri (uri);
+    }
+
     public void to_home () {
         get_current_webview ().load_home ();
     }

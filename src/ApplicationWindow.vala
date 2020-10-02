@@ -85,6 +85,17 @@ public class Xana.ApplicationWindow : Gtk.ApplicationWindow {
             Xana.AboutDialog about_dialog = new Xana.AboutDialog (this);
             about_dialog.present ();
         });
+
+        entry_url_to_go.activate.connect (() => {
+            string uri = entry_url_to_go.get_text ();
+
+            if (uri.contains ("http") || uri.contains ("https")){
+                notebook.load (uri);
+            }
+            else {
+                notebook.load ("http://" + uri);
+            }
+        });
     }
 
     public void update_navigation_buttons () {
