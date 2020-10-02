@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.39.0 -->
+<interface>
+  <requires lib="gtk+" version="3.22"/>
+  <object class="GtkImage" id="image_addtab">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="icon-name">list-add-symbolic</property>
+  </object>
+  <template class="XanaNotebook" parent="GtkNotebook">
+    <property name="visible">True</property>
+    <property name="can-focus">True</property>
+    <property name="show-border">False</property>
+    <property name="scrollable">True</property>
+    <child>
+      <object class="GtkViewport">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+    <child type="tab">
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child type="tab">
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child type="tab">
+      <placeholder/>
+    </child>
+    <child type="action-start">
+      <object class="GtkButton" id="button_add_tab">
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <property name="receives-default">True</property>
+        <property name="image">image_addtab</property>
+        <property name="relief">none</property>
+      </object>
+      <packing>
+        <property name="tab-fill">False</property>
+      </packing>
+    </child>
+  </template>
+</interface>

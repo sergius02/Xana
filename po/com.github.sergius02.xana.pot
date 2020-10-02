@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.sergius02.xana package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.sergius02.xana\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-01 21:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. I don't like this
+#: src/widgets/WebView.vala:27
+msgid "Loading"
+msgstr ""
+
+#: resources/ui/application_window.ui:215
+msgid "Open in other device"
+msgstr ""
+
+#: resources/ui/application_window.ui:369
+msgid "About"
+msgstr ""
+
+#: resources/ui/dialog_about.ui:13
+msgid "A web browser made by and for developers 🤓️"
+msgstr ""
+
+#: resources/ui/dialog_about.ui:15
+msgid "Fork me on Github!"
+msgstr ""
+
+#: data/com.github.sergius02.xana.appdata.xml.in:7
+#: data/com.github.sergius02.xana.desktop.in:4
+msgid "Xana"
+msgstr ""
+
+#: data/com.github.sergius02.xana.appdata.xml.in:8
+#: data/com.github.sergius02.xana.desktop.in:5
+msgid "A dev-oriented web browser, written in Vala"
+msgstr ""
+
+#: data/com.github.sergius02.xana.appdata.xml.in:10
+msgid "A web browser made by and for developers"
+msgstr ""
+
+#: data/com.github.sergius02.xana.appdata.xml.in:15
+msgid "Sergio Fernández Celorio"
+msgstr ""
+
+#: data/com.github.sergius02.xana.desktop.in:6
+msgid "Development web browser"
+msgstr ""
+
+#: data/com.github.sergius02.xana.desktop.in:8
+msgid "com.github.sergius02.xana"
+msgstr ""
+
+#: data/com.github.sergius02.xana.desktop.in:11
+msgid "Develop;Internet;Web;Browser;"
+msgstr ""

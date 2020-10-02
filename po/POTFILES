@@ -1,0 +1,10 @@
+src/Application.vala
+src/ApplicationWindow.vala
+src/WebContext.vala
+src/widgets/Notebook.vala
+src/widgets/WebView.vala
+resources/ui/application_window.ui
+resources/ui/dialog_about.ui
+resources/ui/notebook_tabs.ui
+data/com.github.sergius02.xana.appdata.xml.in
+data/com.github.sergius02.xana.desktop.in

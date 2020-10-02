@@ -1,0 +1,12 @@
+.zoom-button-group {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+.zoom-decrease {
+    border-right: 1px solid lightgray;
+}
+
+.zoom-increase {
+    border-left: 1px solid lightgray;
+}

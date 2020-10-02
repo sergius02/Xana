@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/github/sergius02/xana/">
+    <file>ui/application_window.ui</file>
+    <file>ui/notebook_tabs.ui</file>
+    <file>ui/dialog_about.ui</file>
+
+    <file>css/xana.css</file>
+
+    <file>img/xana.svg</file>
+  </gresource>
+</gresources>

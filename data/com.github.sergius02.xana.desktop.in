@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Xana
+Comment=A dev-oriented web browser, written in Vala
+GenericName=Development web browser
+Exec=com.github.sergius02.xana %U
+Icon=com.github.sergius02.xana
+Terminal=false
+Categories=Utility;GTK;Development;
+Keywords=Develop;Internet;Web;Browser;
