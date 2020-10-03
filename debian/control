@@ -8,7 +8,8 @@ Build-Depends: cmake (>= 2.8),
                valac (>= 0.40.0),
                meson,
                qrencode,
-               libwebkit2gtk-4.0-dev
+               libwebkit2gtk-4.0-dev,
+               libgranite-dev
 Standards-Version: 1.0.0-alpha.1
 
 Package: com.github.sergius02.xana

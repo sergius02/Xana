@@ -21,6 +21,8 @@ For the moment this is a VERY, VERY (really VERY 😹️) simple web browser, as
 
 It's based on Webkit, and inspired in other great browsers like [Midori](https://github.com/midori-browser?type=source)😻️ and [Ephemereal](https://github.com/cassidyjames/ephemeral)😻️.
 
+Developed for [Elementary OS](https://elementary.io/es/).
+
 ## Contribute
 
 This is a project that i'm going improve in my free time, if you think you can help the development, the pull request are open 🎉️
@@ -57,6 +59,7 @@ Ensure you have these dependencies installed
 * glib-2.0
 * gtk+-3.0
 * webkit2gtk-4.0
+* libgranite-dev
 * [qrencode](https://fukuchi.org/works/qrencode/)
 
 ## Install, build and run

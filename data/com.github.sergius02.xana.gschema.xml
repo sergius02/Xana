@@ -1,0 +1,11 @@
+<schemalist>
+  <schema id="com.github.sergius02.xana" path="/com/github/sergius02/xana/">
+
+    <key name="dark-mode" type="b">
+      <default>false</default>
+      <summary>Is dark mode enabled?</summary>
+      <description>State of the dark mode</description>
+    </key>
+
+  </schema>
+</schemalist>

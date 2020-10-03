@@ -1,5 +1,7 @@
 public class Xana.Application : Gtk.Application {
 
+    public static Settings xana_settings = new Settings ("com.github.sergius02.xana");
+
     public string cache_folder;
     public Gtk.CssProvider css_provider;
 
