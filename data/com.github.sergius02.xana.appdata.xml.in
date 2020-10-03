@@ -23,6 +23,10 @@
       <caption>Normal variant</caption>
       <image>https://github.com/sergius02/Xana/raw/main/screenshots/xana.png</image>
     </screenshot>
+    <screenshot>
+      <caption>Dark variant</caption>
+      <image>https://github.com/sergius02/Xana/raw/main/screenshots/xana2.png</image>
+    </screenshot>
   </screenshots>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
