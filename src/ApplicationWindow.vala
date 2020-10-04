@@ -47,9 +47,7 @@ public class Xana.ApplicationWindow : Gtk.ApplicationWindow {
     private Gtk.Button button_reset_zoom;
 
     [GtkChild]
-    private Gtk.Box box_header_right;
-
-    private Granite.ModeSwitch switch_dark_mode;
+    private Gtk.Button button_settings;
 
     private Xana.Notebook notebook;
 
@@ -86,6 +84,10 @@ public class Xana.ApplicationWindow : Gtk.ApplicationWindow {
             button_reset_zoom.label = "%.0f%%".printf (notebook.reset_zoom () * 100);
         });
 
+        button_settings.clicked.connect (() => {
+            notebook.open_settings_tab ();
+        });
+
         modelbutton_about.clicked.connect ( () => {
             Xana.AboutDialog about_dialog = new Xana.AboutDialog (this);
             about_dialog.present ();
@@ -101,30 +103,26 @@ public class Xana.ApplicationWindow : Gtk.ApplicationWindow {
                 notebook.load ("http://" + uri);
             }
         });
-
-        switch_dark_mode = new Granite.ModeSwitch.from_icon_name (
-            "display-brightness-symbolic", "weather-clear-night-symbolic"
-        );
-        switch_dark_mode.primary_icon_tooltip_text = _("Light mode");
-        switch_dark_mode.secondary_icon_tooltip_text = _("Dark mode");
-        switch_dark_mode.valign = Gtk.Align.CENTER;
-        switch_dark_mode.bind_property ("active", Gtk.Settings.get_default (), "gtk_application_prefer_dark_theme");
-        Application.xana_settings.bind ("dark-mode", switch_dark_mode, "active", GLib.SettingsBindFlags.DEFAULT);
-        
-        box_header_right.pack_end (switch_dark_mode, false);
     }
 
-    public void update_navigation_buttons () {
-        this.button_go_back.clicked.connect (notebook.back);
-        this.button_go_back.sensitive = notebook.can_go_back ();
+    public void update_navigation_buttons (bool is_webview) {
+        if (is_webview) {
+            this.button_go_back.clicked.connect (notebook.back);
+            this.button_go_back.sensitive = notebook.can_go_back ();
 
-        this.button_go_forward.clicked.connect (notebook.forward);
-        this.button_go_forward.sensitive = notebook.can_go_forward ();
+            this.button_go_forward.clicked.connect (notebook.forward);
+            this.button_go_forward.sensitive = notebook.can_go_forward ();
 
-        this.button_refresh.clicked.connect (notebook.reload);
-        this.button_stop_refresh.clicked.connect (notebook.stop_reload);
+            this.button_refresh.clicked.connect (notebook.reload);
+            this.button_stop_refresh.clicked.connect (notebook.stop_reload);
 
-        this.entry_url_to_go.text = notebook.current_uri ();
+            this.entry_url_to_go.text = notebook.current_uri ();
+        } else {
+            this.button_go_back.sensitive = false;
+            this.button_go_forward.sensitive = false;
+            this.button_go_forward.sensitive = false;
+            this.entry_url_to_go.text = "xana://settings";
+        }
     }
 
 }

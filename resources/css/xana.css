@@ -10,3 +10,12 @@
 .zoom-increase {
     border-left: 1px solid lightgray;
 }
+
+.settings-section-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.setting-title {
+    font-weight: lighter;
+}

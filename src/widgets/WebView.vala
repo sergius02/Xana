@@ -8,9 +8,8 @@ public class Xana.WebView : WebKit.WebView {
         web_context = new Xana.WebContext ();
     }
 
-    public WebView (Xana.ApplicationWindow application, Gtk.Label tab_label) {
+    public WebView (Xana.ApplicationWindow application) {
         this.application = application;
-        this.tab_label = tab_label;
         this.home = "https://duckduckgo.com/";
 
         get_settings ().enable_developer_extras = true;
@@ -42,6 +41,10 @@ public class Xana.WebView : WebKit.WebView {
 
     public void load_home () {
         load_uri (home);
+    }
+
+    public void set_tab_label (Gtk.Label tab_label) {
+        this.tab_label = tab_label;
     }
 
 }

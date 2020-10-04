@@ -17,19 +17,18 @@ public class Xana.Notebook : Gtk.Notebook {
 
         button_add_tab.clicked.connect (() => {
             new_tab ();
-            show_all ();
-            set_current_page (get_n_pages () - 1);
         });
 
-        switch_page.connect_after (() => {
-            application.update_navigation_buttons ();
+        switch_page.connect_after ((page) => {
+            application.update_navigation_buttons (page is Xana.WebView);
         });
+
     }
 
-    private void new_tab () {
+    private void create_tab (string tab_title, Gtk.Widget tab_content) {
         Gtk.Box tab_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 
-        Gtk.Label tab_label = new Gtk.Label ("New tab");
+        Gtk.Label tab_label = new Gtk.Label (tab_title);
         Gtk.Button tab_button_close = new Gtk.Button.from_icon_name ("window-close-symbolic", Gtk.IconSize.BUTTON);
         tab_button_close.relief = Gtk.ReliefStyle.NONE;
 
@@ -38,16 +37,47 @@ public class Xana.Notebook : Gtk.Notebook {
 
         tab_box.show_all ();
 
-        Xana.WebView web_view = new Xana.WebView (application, tab_label);
-        append_page (web_view, tab_box);
+        append_page (tab_content, tab_box);
 
         tab_button_close.clicked.connect (() => {
             // Little tricky, but it works. Probably must be other method to do this
-            reorder_child (web_view, -1); // Move the tab to the end, reordening every tab
+            reorder_child (tab_content, -1); // Move the tab to the end, reordening every tab
             remove_page (-1); // And then close the last tab
         });
 
-        web_view.load_home ();
+        show_all ();
+
+        if (tab_content is Xana.WebView) {
+            Xana.WebView tab_webview = tab_content as Xana.WebView;
+            tab_webview.set_tab_label (tab_label);
+            tab_webview.load_home ();
+        }
+
+        set_current_page (get_n_pages () - 1);
+    }
+
+    public void open_settings_tab () {
+        bool is_settings_open = false;
+        int settings_tab_position = -1;
+        
+        this.foreach ((child) => {
+            if (child is Xana.SettingsView) {
+                is_settings_open = true;
+                settings_tab_position = page_num (child);
+            }
+        });
+
+        if (!is_settings_open) {
+            Xana.SettingsView settings_view = new Xana.SettingsView ();
+            create_tab ("Xana settings", settings_view);
+        } else {
+            set_current_page (settings_tab_position);
+        }
+    }
+
+    private void new_tab () {
+        Xana.WebView web_view = new Xana.WebView (application);
+        create_tab ("New tab", web_view);
     }
 
     public void load (string uri) {
