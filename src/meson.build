@@ -9,4 +9,5 @@ sources = files (
     'widgets/Notebook.vala',
     'widgets/WebView.vala',
     'widgets/AboutDialog.vala',
+    'widgets/SettingsView.vala'
 )

@@ -1,5 +1,7 @@
 public class Xana.Application : Gtk.Application {
 
+    public static Settings xana_settings = new Settings ("com.github.sergius02.xana");
+
     public string cache_folder;
     public Gtk.CssProvider css_provider;
 
@@ -12,6 +14,7 @@ public class Xana.Application : Gtk.Application {
 
     protected override void activate () {
         create_cache_folder ();
+        new Xana.SettingsView (); // Force to load the settings at the launch, specially the dark mode
 
         this.css_provider = new Gtk.CssProvider ();
         css_provider.load_from_resource ("/com/github/sergius02/xana/css/xana.css");

@@ -4,6 +4,7 @@
     <file>ui/application_window.ui</file>
     <file>ui/notebook_tabs.ui</file>
     <file>ui/dialog_about.ui</file>
+    <file>ui/settings_view.ui</file>
 
     <file>css/xana.css</file>
 

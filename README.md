@@ -7,9 +7,10 @@
 ![Build Status](https://img.shields.io/travis/sergius02/Xana/main?style=for-the-badge)
 ![License](https://img.shields.io/github/license/sergius02/Xana?style=for-the-badge)
 
-<p align="center">
-  <img src="screenshots/xana.png" alt="Icon" />
-</p>
+
+|![Xana light theme](screenshots/xana.png) | 
+|------------------------------------------|
+![Xana dark theme](screenshots/xana2.png)|
 
 A web browser made by and for developers 🤓️
 
@@ -20,6 +21,8 @@ With this browser i try to make a tool that helps every web developer. Instead o
 For the moment this is a VERY, VERY (really VERY 😹️) simple web browser, as it's a work in progress.
 
 It's based on Webkit, and inspired in other great browsers like [Midori](https://github.com/midori-browser?type=source)😻️ and [Ephemereal](https://github.com/cassidyjames/ephemeral)😻️.
+
+Developed for [Elementary OS](https://elementary.io/es/).
 
 ## Contribute
 
@@ -57,6 +60,7 @@ Ensure you have these dependencies installed
 * glib-2.0
 * gtk+-3.0
 * webkit2gtk-4.0
+* libgranite-dev
 * [qrencode](https://fukuchi.org/works/qrencode/)
 
 ## Install, build and run
