@@ -60,7 +60,6 @@ Ensure you have these dependencies installed
 * glib-2.0
 * gtk+-3.0
 * webkit2gtk-4.0
-* libgranite-dev
 * [qrencode](https://fukuchi.org/works/qrencode/)
 
 ## Install, build and run
