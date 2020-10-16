@@ -64,20 +64,34 @@ Ensure you have these dependencies installed
 
 ## Install, build and run
 
+libwebkit2gtk-4.0-dev
+
 ```bash
-# install elementary-sdk, meson and ninja
-sudo apt install elementary-sdk meson ninja
+# FOR ELEMENTARY OS USERS
+sudo apt install elementary-sdk
+
+# FOR THE REST
+sudo apt install cmake libgtk-3-dev gettext libwebkit2gtk-4.0-dev meson ninja-build
+
 # install qrencode
 sudo apt install qrencode
+
 # clone repository
 git clone https://github.com/sergius02/Xana Xana
+
 # cd to dir
 cd Xana
+
 # run meson
 meson build --prefix=/usr
-# cd to build, build and test
+
+# cd to build
 cd build
+
+# build
 ninja
+
+# install
 sudo ninja install
 ```
 
